@@ -16,7 +16,8 @@ abstract class Paras{
 class ParasP extends Paras{
     constructor(name:string){
         super(name);//call Paras constructor
-    }
+        console.log("child called")
+    };
     getName(): void {
         console.log(this.name);
     }
@@ -24,5 +25,6 @@ class ParasP extends Paras{
 
 //abstract class can only be accessed by its children.
 //We can't make direct instance from abstract class
+//super should be called to ensure that parent class is called before child class
 const newParas = new ParasP("paras");
 export{}

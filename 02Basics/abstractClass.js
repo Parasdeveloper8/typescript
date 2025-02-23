@@ -35,8 +35,11 @@ var Paras = /** @class */ (function () {
 var ParasP = /** @class */ (function (_super) {
     __extends(ParasP, _super);
     function ParasP(name) {
-        return _super.call(this, name) || this; //call Paras constructor
+        var _this = _super.call(this, name) || this; //call Paras constructor
+        console.log("child called");
+        return _this;
     }
+    ;
     ParasP.prototype.getName = function () {
         console.log(this.name);
     };
@@ -44,4 +47,5 @@ var ParasP = /** @class */ (function (_super) {
 }(Paras));
 //abstract class can only be accessed by its children.
 //We can't make direct instance from abstract class
+//super should be called to ensure that parent class is called before child class
 var newParas = new ParasP("paras");
