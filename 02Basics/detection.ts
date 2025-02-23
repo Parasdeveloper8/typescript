@@ -32,4 +32,5 @@ typePred(42);
 //"discriminative union" just means a union of types that share a common property to make type narrowing easy and safe. 
 
 //Exhaustiveness checking ensures that all possible cases of a discriminated union are handled, so if a new type is added later, TypeScript will warn you if it's missing in a switch statement.
+
 export{}
